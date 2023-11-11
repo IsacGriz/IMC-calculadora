@@ -1,15 +1,15 @@
 function imc () {
   const form = document.querySelector('.form');
-  const peso = form.querySelector('#peso');
-  const altura = form.querySelector('#altura');
+  let peso = form.querySelector('#peso');
+  let altura = form.querySelector('#altura');
   const resultado = document.querySelector('#paragrafo');
-  
+
   resultado.innerHTML = '';
 
   function imcCalculo (evento) {
     evento.preventDefault();
     
-    imc = (peso.value / (altura.value ** 2)).toFixed(2);
+    imc = ((peso.value).replace(',', '.') / ((altura.value).replace(',', '.') ** 2)).toFixed(2);
 
     if (imc < 18.5) {
       resultado.innerHTML = `<p>O seu IMC é de ${imc} e você está abaixo do peso!</p>`;
