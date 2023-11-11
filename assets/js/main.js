@@ -32,8 +32,6 @@ function imc () {
       resultado.innerHTML = `<p>O seu IMC é de ${imc} e você está com obesidade de grau 2!</p>`;
     } else if (imc >= 40) {
       resultado.innerHTML = `<p>O seu IMC é de ${imc} e você está com obesidade de grau 3!</p>`;
-    } else if (imc === Infinity) {
-      resultado.innerHTML = 'Valores inválidos';
     } else {
       resultado.innerHTML = 'Você digitou caracteres inválidos! Verifique e tente novamente!';
     }
